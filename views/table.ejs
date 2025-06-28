@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Table Result</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-white">
+    <div class="container py-5">
+      <h2 class="mb-4 text-center">🔢 Table of <%= number %></h2>
+      <table class="table table-bordered text-center shadow-sm">
+        <thead class="table-dark">
+          <tr>
+            <!-- <th>#</th> -->
+            <th>Result</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% table.forEach(row => { %>
+          <tr>
+            <td><%= number %> x <%= row.i %> = <%= row.result %></td>
+          </tr>
+          <% }) %>
+        </tbody>
+      </table>
+      <div class="text-center">
+        <a href="/" class="btn btn-secondary">🔙 Back</a>
+      </div>
+    </div>
+  </body>
+</html>
